@@ -12,7 +12,6 @@ class App extends Component {
       recent: [],
       Alltime: []
     }
-    this.handleSort = this.handleSort.bind(this);
   }
 
   getRecent() {
@@ -21,7 +20,7 @@ class App extends Component {
       dataType: 'json',
       cache: false,
       success: function(data) {
-        this.setState({campers: data});
+        this.setState({recent: data});
       }.bind(this),
       error: function(xhr, status, err) {
         console.log(err);
@@ -43,23 +42,15 @@ class App extends Component {
     });
   }
 
-  handleSort() {
-    let arr = this.state.recent;
-    let sort = arr.sort(function(a, b) {
-      return a.alltime - b.alltime;
-    });
-    this.setState({campers: sort});
-  }
-
   componentWillMount() {
-    this.getCampers();
+    this.getRecent();
   }
 
   render() {
     return (
       <div>
         <Home />
-        <Camper sort={this.handleSort} campers={this.state.recent} />
+        <Camper recent={this.state.recent} />
         <Footer />
       </div>
     );
