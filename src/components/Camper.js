@@ -6,7 +6,7 @@ class Camper extends React.Component{
   
   render() {
     let count = 1;
-    let camperItems = this.props.campers.map((camper, i) => {
+    let camperItems = this.props.recent.map((camper, i) => {
       return (
         <CamperItem count={count++} camper={camper} key={i} index={i} />
       );
@@ -19,7 +19,7 @@ class Camper extends React.Component{
               <th>#</th>
               <th>Camper Name</th>
               <th>Points in the last 30days</th>
-              <th onClick={this.sort}>Alltime Points in the curriculum</th>
+              <th>Alltime Points in the curriculum</th>
             </tr>
           </thead>
           <tbody>
