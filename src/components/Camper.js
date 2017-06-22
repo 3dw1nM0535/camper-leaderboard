@@ -15,7 +15,7 @@ class Camper extends React.Component{
     });
     return(
       <div className="container">
-        <table className="table">
+        <table className="table table-striped">
           <thead className="thead-inverse">
             <tr>
               <th>#</th>
@@ -24,7 +24,9 @@ class Camper extends React.Component{
               <th>Alltime Points in the curriculum</th>
             </tr>
           </thead>
-          {camperItems}
+          <tbody>
+            {camperItems}
+          </tbody>
         </table>
       </div>
     );
