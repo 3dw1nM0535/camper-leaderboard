@@ -1,5 +1,6 @@
 import React from 'react';
 import CamperItem from './camperItem';
+import '../App.css';
 
 class Camper extends React.Component{
   render() {
@@ -10,7 +11,7 @@ class Camper extends React.Component{
     })
     return(
       <div className="container">
-        <table className="table table-responsive table-striped">
+        <table className="table table-striped">
           <thead className="thead-inverse">
             <tr>
               <th>#</th>
