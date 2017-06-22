@@ -35,7 +35,7 @@ class App extends Component {
     return (
       <div>
         <Home />
-        <Camper sort={this.handleSort.bind(this)} campers={this.state.campers} />
+        <Camper campers={this.state.campers} />
         <Footer />
       </div>
     );
