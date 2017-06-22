@@ -3,6 +3,9 @@ import CamperItem from './camperItem';
 import '../App.css';
 
 class Camper extends React.Component{
+  sortItems() {
+    this.props.sort();
+  }
   render() {
     let camperItems = this.props.campers.map((camper, i) => {
       return (
@@ -15,7 +18,7 @@ class Camper extends React.Component{
           <thead className="thead-inverse">
             <tr>
               <th>#</th>
-              <th>Camper Name</th>
+              <th onClick={this.sortItems.bind(this)}>Camper Name</th>
               <th>Points in the last 30days</th>
               <th>Alltime Points in the curriculum</th>
             </tr>
