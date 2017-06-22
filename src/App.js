@@ -31,11 +31,15 @@ class App extends Component {
     this.getCampers();
   }
 
+  handleSort() {
+    this.state.campers.sort();
+  }
+
   render() {
     return (
       <div>
         <Home />
-        <Camper campers={this.state.campers} />
+        <Camper sort={this.handleSort.bind(this)} campers={this.state.campers} />
         <Footer />
       </div>
     );
