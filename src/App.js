@@ -13,6 +13,8 @@ class App extends Component {
       Alltime: [],
       dynamics: []
     }
+    this.recentUsers = this.recentUsers.bind(this);
+    this.alltimeUsers = this.alltimeUsers.bind(this);
   }
 
   recentUsers() {
@@ -60,7 +62,7 @@ class App extends Component {
     return (
       <div>
         <Home />
-        <Camper recent={this.state.recent} />
+        <Camper dynamics={this.state.dynamics} recents={this.recentUsers} alltimes={this.alltimeUsers} />
         <Footer />
       </div>
     );
