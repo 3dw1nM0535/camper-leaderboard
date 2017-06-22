@@ -3,7 +3,12 @@ import CamperItem from './camperItem';
 import '../App.css';
 
 class Camper extends React.Component{
-  
+  allRecents() {
+    this.props.recents();
+  }
+  allTimes() {
+    this.props.alltimes();
+  }
   render() {
     let count = 1;
     let camperItems = this.props.dynamics.map((camper, i) => {
@@ -18,8 +23,8 @@ class Camper extends React.Component{
             <tr>
               <th>#</th>
               <th>Camper Name</th>
-              <th>Points in the last 30days<span onClick={this.></span></th>
-              <th>Alltime Points in the curriculum <span></span></th>
+              <th><span onClick={this.allRecents.bind(this)}>Points in the last 30days</span></th>
+              <th><span onClick={this.allTimes.bind(this)}>Alltime Points in the curriculum</span></th>
             </tr>
           </thead>
           <tbody>
