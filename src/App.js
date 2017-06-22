@@ -29,7 +29,7 @@ class App extends Component {
       dataType: 'json',
       cache: false,
       success: function(data) {
-        this.setState({recent: data});
+        this.setState({recent: data, dynamics: data});
       }.bind(this),
       error: function(xhr, status, err) {
         console.log(err);
@@ -53,6 +53,7 @@ class App extends Component {
 
   componentWillMount() {
     this.getRecent();
+    this.getAlltime();
   }
 
   render() {
