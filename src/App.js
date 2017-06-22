@@ -10,8 +10,17 @@ class App extends Component {
     super(props);
     this.state = {
       recent: [],
-      Alltime: []
+      Alltime: [],
+      dynamics: []
     }
+  }
+
+  recentUsers() {
+    this.setState({dynamics: this.state.recent});
+  }
+
+  alltimeUsers() {
+    this.setState({dynamics: this.state.Alltime});
   }
 
   getRecent() {
