@@ -19,7 +19,7 @@ class Camper extends React.Component{
               <th>#</th>
               <th>Camper Name</th>
               <th>Points in the last 30days</th>
-              <th>Alltime Points in the curriculum</th>
+              <th>Alltime Points in the curriculum <span onClick={() => this.sortingHandler(this.props.recent.alltime)}></span></th>
             </tr>
           </thead>
           <tbody>
