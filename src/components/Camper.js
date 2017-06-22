@@ -6,7 +6,7 @@ class Camper extends React.Component{
   
   render() {
     let count = 1;
-    let camperItems = this.props.recent.map((camper, i) => {
+    let camperItems = this.props.dynamics.map((camper, i) => {
       return (
         <CamperItem count={count++} camper={camper} key={i} index={i} />
       );
@@ -18,8 +18,8 @@ class Camper extends React.Component{
             <tr>
               <th>#</th>
               <th>Camper Name</th>
-              <th>Points in the last 30days</th>
-              <th>Alltime Points in the curriculum <span onClick={() => this.sortingHandler(this.props.recent.alltime)}></span></th>
+              <th>Points in the last 30days<span onClick={this.></span></th>
+              <th>Alltime Points in the curriculum <span></span></th>
             </tr>
           </thead>
           <tbody>
