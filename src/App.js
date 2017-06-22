@@ -18,9 +18,7 @@ class App extends Component {
       dataType: 'json',
       cache: false,
       success: function(data) {
-        this.setState({campers: data}, function() {
-          console.log(this.state);
-        });
+        this.setState({campers: data});
       }.bind(this),
       error: function(xhr, status, err) {
         console.log(err);
