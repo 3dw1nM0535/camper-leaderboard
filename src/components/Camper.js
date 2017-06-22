@@ -7,9 +7,10 @@ class Camper extends React.Component{
     this.props.sort();
   }
   render() {
+    let count = 1;
     let camperItems = this.props.campers.map((camper, i) => {
       return (
-        <CamperItem camper={camper} key={i} index={i} />
+        <CamperItem count={count++} camper={camper} key={i} index={i} />
       );
     });
     return(
