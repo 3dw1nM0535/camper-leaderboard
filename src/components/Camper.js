@@ -8,7 +8,7 @@ class Camper extends React.Component{
       return (
         <CamperItem camper={camper} key={i} index={i} />
       );
-    })
+    });
     return(
       <div className="container">
         <table className="table">
