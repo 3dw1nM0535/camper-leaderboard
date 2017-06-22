@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
 import Home from './components/Home';
+import Camper from './components/Camper';
 import Footer from './Footer';
 import './App.css';
 
@@ -34,6 +35,7 @@ class App extends Component {
     return (
       <div>
         <Home />
+        <Camper campers={this.state.campers} />
         <Footer />
       </div>
     );
