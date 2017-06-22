@@ -31,10 +31,6 @@ class App extends Component {
     this.getCampers();
   }
 
-  handleSort() {
-    this.state.campers.sort();
-  }
-
   render() {
     return (
       <div>
