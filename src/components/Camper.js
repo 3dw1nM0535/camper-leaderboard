@@ -11,7 +11,7 @@ class Camper extends React.Component{
     })
     return(
       <div className="container">
-        <table className="table table-striped">
+        <table className="table">
           <thead className="thead-inverse">
             <tr>
               <th>#</th>
